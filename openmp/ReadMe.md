@@ -50,7 +50,7 @@ Current test cases including matrix memory copy, Fibonacci sequence generation, 
 ## Future Work:
 
 
-1. Energy profiling still has problems to solved. Currently it does not work on AMD. So as the final power profiling on Jetson TX2 is not 
+1. Energy profiling still has problems to solved. So as the final power profiling on Jetson TX2 is imcompleted.
 2. The STEER scheduler is currently implemented solely on the OpenMP taskloop pragma. Future endeavors could explore its adaptation to other scheduling primitives to cater to diverse computational scenarios.
 
 ## References
