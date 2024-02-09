@@ -1,0 +1,8 @@
+cp /home/longc/projects/llvm-project/openmp/build/runtime/src/libomp.so /usr/local/lib/libomp.so
+mk && sudo cp /home/long/project/llvm-project/openmp/build/runtime/src/libomp.so /usr/lib/aarch64-linux-gnu/libomp.so
+
+./taskloop_matmul
+
+make -j 8
+
+这里得支持安装

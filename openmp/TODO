@@ -1,0 +1,32 @@
+1. 实现set_cpu_freq                             应该没问题了，使用这个路径下的/home/long/project/llvm-project/openmp/tools/cpuset
+2. 更新time table                               这个应该也ok
+2. 更新修改每一个core的状态
+2. 调度的algorithm1
+3. 调度的algorithm2
+4. energy的监测
+5. time tick的监测
+6. 将结果绘图
+1. 设置power table                              搞这个！这个很重要，需要刚开始进行训练，填充好power table
+2. 计算memory boundness
+1. openmp里面是怎么分配到每一个core上的任务的呢？
+2. task finish的部分需要多添加上来一些代码
+
+1. 训练阶段，填充perf表格要做好，先搞定这一个，fuck！
+2. 对于scheduling，fine grained task，要多个并成一个
+
+
+如果
+
+梳理一遍逻辑
+
+需要runtime和idle power，乘时间，来获得预测的能量消耗，找到能量消耗最少的配置，然后分配到那个配置
+
+
+分配配置通过设置task的cluser、width，以及frequency tuning
+
+runtime和idle power，通过读取已经写好的配置文件     已经搞定
+
+时间是难点，通过计算mb，然后填充整个表单，来筛选出实际的运行时间        还没，我还不知道该怎么去结束搞定
+
+然后两周分配方法，一个是直接分配（coarse），一个是多个fine的，把它们并到一起    这里大概的代码有，主要是上边部分还缺一些
+
